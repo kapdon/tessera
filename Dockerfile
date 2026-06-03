@@ -32,7 +32,7 @@ RUN pacman -Syu --needed --noconfirm \
   less \
   lsof \
   nano \
-  nodejs \
+  nodejs-lts-jod \
   npm \
   openbsd-netcat \
   openssh \
@@ -44,6 +44,7 @@ RUN pacman -Syu --needed --noconfirm \
   python \
   python-pip \
   python-pipx \
+  python-setuptools \
   ripgrep \
   rq \
   rsync \
