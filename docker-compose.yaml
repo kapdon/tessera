@@ -1,9 +1,8 @@
 services:
   tessera:
     container_name: tessera
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ${TESSERA_IMAGE:-ghcr.io/kapdon/tessera:dev}
+    pull_policy: ${TESSERA_PULL_POLICY:-always}
     cap_add:
       - SYS_ADMIN
     security_opt:
