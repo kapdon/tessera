@@ -8,6 +8,7 @@ services:
     environment:
       TESSERA_HOST: 0.0.0.0
     volumes:
+      # Bind mounts keep each data area easy to inspect and edit on the host.
       - ./data/config:/home/tessera/.config
       - ./data/local:/home/tessera/.local
       - ./data/gitconfig:/home/tessera/.gitconfig
@@ -15,4 +16,12 @@ services:
       - ./data/codex:/home/tessera/.codex
       - ./data/tessera:/home/tessera/.tessera
       - ./workspaces:/home/tessera/workspaces
+      # Docker-managed alternative: replace the bind mounts above with:
+      # - tessera-home:/home/tessera
+      # Optional: keep workspace checkouts in a separate named volume:
+      # - tessera-workspaces:/home/tessera/workspaces
     restart: unless-stopped
+
+# volumes:
+#   tessera-home:
+#   tessera-workspaces:

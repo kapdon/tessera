@@ -3,6 +3,9 @@
 .agents
 .codex
 
+docker-compose*.yaml
+docker-compose*.yml
+
 node_modules
 .next
 dist-server
