@@ -3,11 +3,6 @@ services:
     container_name: tessera
     image: ${TESSERA_IMAGE:-ghcr.io/kapdon/tessera:dev}
     pull_policy: ${TESSERA_PULL_POLICY:-always}
-    cap_add:
-      - SYS_ADMIN
-    security_opt:
-      - seccomp=unconfined
-      - apparmor=unconfined
     ports:
       - "32123:32123"
     environment:
